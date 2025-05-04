@@ -1,73 +1,84 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DripLens - Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #cdb4db;
+      --text: #3d3d3d;
+      --accent: #b8a1d9;
+      --bg: #f9f6fb;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Arial", sans-serif;
     }
 
     body {
-      background: #fdf6f9;
-      color: #222;
+      background: var(--bg);
+      font-family: 'Outfit', sans-serif;
+      color: var(--text);
       height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background-image: url('https://i.imgur.com/QqjI9j1.png'); /* Optional swan shadow/logo */
-      background-size: 300px;
-      background-repeat: no-repeat;
-      background-position: center 20%;
+      padding: 20px;
     }
 
     h1 {
+      font-family: 'Playfair Display', serif;
       font-size: 3rem;
+      color: var(--accent);
       margin-bottom: 10px;
-      color: #d63384;
+      letter-spacing: 1px;
     }
 
-    p {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      color: #555;
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #7a6f8d;
+      margin-bottom: 40px;
     }
 
-    .notify-btn {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background: #d63384;
+    .btn {
+      background: var(--accent);
       color: white;
+      padding: 12px 28px;
+      font-size: 1rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 40px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
 
-    .notify-btn:hover {
-      background: #c21868;
+    .btn:hover {
+      background: #a68bc5;
     }
 
     footer {
       position: absolute;
       bottom: 20px;
       font-size: 0.9rem;
-      color: #888;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <h1>DripLens</h1>
-  <p>We're launching soon! Stay tuned for the drip!</p>
-  <button class="notify-btn">Notify Me</button>
 
-  <footer>&copy; 2025 DripLens. All rights reserved.</footer>
+  <h1>DripLens</h1>
+  <h2>The elegance is brewing. Something stunning is coming soon.</h2>
+  <button class="btn">Notify Me</button>
+
+  <footer>&copy; 2025 DripLens. Crafted with soul.</footer>
+
 </body>
 </html>
 
