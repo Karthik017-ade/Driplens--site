@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DripLens - Coming Soon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>DripLens – Premium Drip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #cdb4db;
-      --text: #3d3d3d;
-      --accent: #b8a1d9;
-      --bg: #f9f6fb;
+      --bg: #f8f6f3;
+      --text-dark: #2e2e2e;
+      --accent: #cdb4db;
+      --card-bg: #ffffff;
+      --border: #e5e5e5;
     }
 
     * {
@@ -21,72 +21,138 @@
     }
 
     body {
-      background: var(--bg);
       font-family: 'Outfit', sans-serif;
-      color: var(--text);
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      background: var(--bg);
+      color: var(--text-dark);
+      padding: 40px 20px;
+    }
+
+    header {
       text-align: center;
-      padding: 20px;
-      position: relative;
+      margin-bottom: 50px;
     }
 
-    .logo-img {
-      width: 120px;
-      margin-bottom: 25px;
-      opacity: 0.9;
-    }
-
-    h1 {
+    header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
-      color: var(--accent);
-      margin-bottom: 12px;
       letter-spacing: 1px;
     }
 
-    h2 {
+    header p {
       font-size: 1.1rem;
-      font-weight: 300;
-      color: #7a6f8d;
-      margin-bottom: 35px;
+      color: #6e6e6e;
+      margin-top: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: #666;
+      margin-bottom: 15px;
     }
 
     .btn {
-      background: var(--accent);
-      color: white;
-      padding: 12px 28px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 40px;
+      padding: 10px 22px;
+      border: 1px solid var(--accent);
+      color: var(--text-dark);
+      border-radius: 50px;
+      font-weight: 500;
+      background: transparent;
       cursor: pointer;
       transition: all 0.3s ease;
-      font-weight: 500;
     }
 
     .btn:hover {
-      background: #a68bc5;
+      background: var(--accent);
+      color: white;
     }
 
     footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 60px;
       color: #aaa;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
 
-  <img src="logo.png" alt="DripLens Logo" class="logo-img" />
-  <h1>DripLens</h1>
-  <h2>The elegance is brewing. Something stunning is coming soon.</h2>
-  <button class="btn">Notify Me</button>
+  <header>
+    <h1>DRIPLENS</h1>
+    <p>Your calmest drip plug</p>
+  </header>
 
-  <footer>&copy; 2025 DripLens. Crafted with soul.</footer>
+  <section class="grid">
+    <div class="card">
+      <img src="hoodie.jpg" alt="Oversized Off-White Hoodie" />
+      <h3>Oversized Off-White Hoodie</h3>
+      <p>For those who move quiet but never miss. Soft tone, heavy impact.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="card">
+      <img src="pants.jpg" alt="Beige Cargo Pants" />
+      <h3>Beige Cargo Pants w/ Straps</h3>
+      <p>Tactical feel, relaxed fit. Everyday comfort meets street detail.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="card">
+      <img src="bag.jpg" alt="Pastel Pink Bag" />
+      <h3>Pastel Pink Crossbody Bag</h3>
+      <p>A calm touch to complete your fit — lowkey, high drjo.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="card">
+      <img src="necklace.jpg" alt="Matte Chain" />
+      <h3>Matte Black Chain Necklace</h3>
+      <p>No shine, just presence. Pairs with anything, speaks for itself.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="card">
+      <img src="sneakers.jpg" alt="Neutral New Balance" />
+      <h3>Neutral Tone New Balance 550s</h3>
+      <p>Earthy tones for grounded flexers. Clean but different.</p>
+      <button class="btn">Sneakers</button>
+    </div>
+    <div class="card">
+      <img src="cap.jpg" alt="Khaki Cap" />
+      <h3>Khaki Cap</h3>
+      <p>The no-logote, calm cap for chill minds.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 DripLens. All rights reserved.</footer>
 
 </body>
 </html>
