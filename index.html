@@ -48,11 +48,27 @@
     }
     .thankyou {
       position: absolute;
-      bottom: 25px;
+      bottom: 60px;
       font-size: 1rem;
       color: #999;
       letter-spacing: 0.5px;
     }
+    .menu {
+      position: absolute;
+      bottom: 15px;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #a187ff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+    .menu a:hover { color: #7b5df9; }
   </style>
 </head>
 <body>
@@ -60,7 +76,11 @@
   <p>Check out new trends<br>Website coming soon. Stay tuned!</p>
   <div class="inspired">Inspired by Hermès</div>  <a href="https://www.instagram.com/adrien._0.1" target="_blank">
     <button class="follow-btn">Follow Us @adrien._0.1</button>
-  </a>  <div class="countdown" id="countdown"></div>  <div class="thankyou">Thank you for visiting us</div>  <script>
+  </a>  <div class="countdown" id="countdown"></div>  <div class="thankyou">Thank you for visiting us</div>  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Orders</a>
+    <a href="#">Profile</a>
+  </div>  <script>
     const countdownEl = document.getElementById('countdown');
     const targetDate = new Date();
     targetDate.setFullYear(targetDate.getFullYear() + 9);
