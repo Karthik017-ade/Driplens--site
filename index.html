@@ -5,12 +5,52 @@
   <title>Driplens</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background-color: #f9f6ff; color: #333; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; }
+    body {
+      background-color: #f4efff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
     h1 { font-size: 2.5rem; color: #a187ff; margin-bottom: 0.5rem; }
     p { color: #777; font-size: 1.1rem; margin-bottom: 2rem; }
-    .follow-btn { background-color: #a187ff; color: white; border: none; padding: 0.9rem 2rem; border-radius: 25px; font-size: 1rem; cursor: pointer; transition: 0.3s ease; }
+    .follow-btn {
+      background-color: #a187ff;
+      color: white;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
     .follow-btn:hover { opacity: 0.9; }
-    footer { position: absolute; bottom: 20px; font-size: 0.85rem; color: #777; }
+    .countdown {
+      font-size: 1rem;
+      color: #6f6b80;
+      margin-top: 1.5rem;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 0.8rem 1.5rem;
+      border-radius: 20px;
+    }
+    .inspired {
+      position: absolute;
+      bottom: 60px;
+      font-size: 0.9rem;
+      color: rgba(161,135,255,0.3);
+      font-weight: 500;
+    }
+    .thankyou {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
@@ -18,7 +58,26 @@
   <p>Check out new trends<br>Website coming soon. Stay tuned!</p>
   <a href="https://www.instagram.com/adrien._0.1" target="_blank">
     <button class="follow-btn">Follow Us @adrien._0.1</button>
-  </a>
-  <footer>© 2025 Driplens. All rights reserved.</footer>
-</body>
+  </a>  <div class="countdown" id="countdown"></div>  <div class="inspired">Inspired by Hermès</div>
+  <div class="thankyou">Thank you for visiting us</div>  <script>
+    const countdownEl = document.getElementById('countdown');
+    const targetDate = new Date();
+    targetDate.setFullYear(targetDate.getFullYear() + 9);
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${years} Years ${days} Days ${hours} Hrs ${minutes} Min ${seconds} Sec`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script></body>
 </html>
