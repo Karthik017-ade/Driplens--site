@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,90 +5,20 @@
   <title>Driplens</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background-color: #f8f6fa; color: #222; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05); position: sticky; top: 0; }
-    nav h1 { font-size: 1.5rem; color: #9c6eff; font-weight: 700; }
-    nav ul { display: flex; list-style: none; gap: 1.5rem; }
-    nav ul li { cursor: pointer; font-weight: 500; color: #444; }
-    nav ul li:hover { color: #9c6eff; }.page { display: none; padding: 3rem 1rem; text-align: center; }
-.active { display: block; }
-
-.home-title { font-size: 2.2rem; color: #9c6eff; margin-bottom: 1rem; }
-.subtitle { font-size: 1.1rem; color: #555; margin-bottom: 2rem; }
-.follow-btn { background: #9c6eff; color: #fff; padding: 0.9rem 2rem; border: none; border-radius: 30px; cursor: pointer; font-size: 1rem; }
-.follow-btn:hover { opacity: 0.9; }
-
-.products-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
-.product-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 1rem; text-align: left; }
-.product-card img { width: 100%; border-radius: 10px; margin-bottom: 0.8rem; }
-.product-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
-.product-card p { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
-.buy-btn { background: #111; color: #fff; padding: 0.6rem 1.2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
-.buy-btn:hover { background: #333; }
-
-footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #666; }
-
+    body { background-color: #f9f6ff; color: #333; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; }
+    h1 { font-size: 2.5rem; color: #a187ff; margin-bottom: 0.5rem; }
+    p { color: #777; font-size: 1.1rem; margin-bottom: 2rem; }
+    .follow-btn { background-color: #a187ff; color: white; border: none; padding: 0.9rem 2rem; border-radius: 25px; font-size: 1rem; cursor: pointer; transition: 0.3s ease; }
+    .follow-btn:hover { opacity: 0.9; }
+    footer { position: absolute; bottom: 20px; font-size: 0.85rem; color: #777; }
   </style>
 </head>
 <body>
-  <nav>
-    <h1>DRIPLENS</h1>
-    <ul>
-      <li onclick="showPage('home')">Home</li>
-      <li onclick="showPage('shop')">Shop</li>
-    </ul>
-  </nav>  <!-- Home Page -->  <section id="home" class="page active">
-    <h1 class="home-title">DRIPLENS</h1>
-    <p class="subtitle">Check out new trends<br>Website coming soon. Stay tuned!</p>
-    <a href="https://www.instagram.com/adrien._0.1" target="_blank">
-      <button class="follow-btn">Follow Us @adrien._0.1</button>
-    </a>
-  </section>  <!-- Shop Page -->  <section id="shop" class="page">
-    <h1 style="font-size:2rem; margin-bottom:1rem;">Your calmest drip plug</h1>
-    <div class="products-container">
-      <div class="product-card">
-        <img src="https://i.ibb.co/G9gV1kM/hoodie.jpg" alt="Hoodie">
-        <h3>Oversized Off-White Hoodie</h3>
-        <p>For those who move quiet but never miss, soft tone, heavy impact.</p>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://i.ibb.co/f4bWpns/cargo-pants.jpg" alt="Cargo Pants">
-        <h3>Beige Cargo Pants w/ Adjustable Straps</h3>
-        <p>Tactical feel, relaxed fit. Everyday comfort meets street detail.</p>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://i.ibb.co/3kCd0cm/pink-bag.jpg" alt="Crossbody Bag">
-        <h3>Pastel Pink Crossbody Bag</h3>
-        <p>A calm touch to complete your fit — lowkey, high drip.</p>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://i.ibb.co/QbPz7Ks/black-chain.jpg" alt="Black Chain">
-        <h3>Matte Black Chain Necklace</h3>
-        <p>No shine, just presence. Pairs with anything, speaks for itself.</p>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-      <div class="product-card">
-        <img src="https://i.ibb.co/mzyw7CB/newbalance.jpg" alt="Sneakers">
-        <h3>Neutral Tone New Balance 550s</h3>
-        <p>Earthy tones for grounded fitters. Clean but different go-to.</p>
-        <button class="buy-btn">Sneakers</button>
-      </div>
-      <div class="product-card">
-        <img src="https://i.ibb.co/N2HP4dq/khaki-cap.jpg" alt="Khaki Cap">
-        <h3>Khaki Cap</h3>
-        <p>The no-logote, calm cap for chill minds.</p>
-        <button class="buy-btn">Buy Now</button>
-      </div>
-    </div>
-  </section>  <footer>
-    © 2025 Driplens. All rights reserved.
-  </footer>  <script>
-    function showPage(pageId) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.getElementById(pageId).classList.add('active');
-    }
-  </script></body>
+  <h1>DRIPLENS</h1>
+  <p>Check out new trends<br>Website coming soon. Stay tuned!</p>
+  <a href="https://www.instagram.com/adrien._0.1" target="_blank">
+    <button class="follow-btn">Follow Us @adrien._0.1</button>
+  </a>
+  <footer>© 2025 Driplens. All rights reserved.</footer>
+</body>
 </html>
