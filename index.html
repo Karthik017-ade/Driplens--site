@@ -18,7 +18,14 @@
       overflow: hidden;
     }
     h1 { font-size: 2.5rem; color: #a187ff; margin-bottom: 0.5rem; }
-    p { color: #777; font-size: 1.1rem; margin-bottom: 2rem; }
+    p { color: #777; font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .inspired {
+      font-size: 2rem;
+      color: rgba(161,135,255,0.5);
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+    }
     .follow-btn {
       background-color: #a187ff;
       color: white;
@@ -28,38 +35,32 @@
       font-size: 1rem;
       cursor: pointer;
       transition: 0.3s ease;
+      margin-bottom: 1.5rem;
     }
     .follow-btn:hover { opacity: 0.9; }
     .countdown {
       font-size: 1rem;
       color: #6f6b80;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       background: rgba(255, 255, 255, 0.4);
       padding: 0.8rem 1.5rem;
       border-radius: 20px;
     }
-    .inspired {
-      position: absolute;
-      bottom: 60px;
-      font-size: 0.9rem;
-      color: rgba(161,135,255,0.3);
-      font-weight: 500;
-    }
     .thankyou {
       position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: #888;
+      bottom: 25px;
+      font-size: 1rem;
+      color: #999;
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
 <body>
   <h1>DRIPLENS</h1>
   <p>Check out new trends<br>Website coming soon. Stay tuned!</p>
-  <a href="https://www.instagram.com/adrien._0.1" target="_blank">
+  <div class="inspired">Inspired by Hermès</div>  <a href="https://www.instagram.com/adrien._0.1" target="_blank">
     <button class="follow-btn">Follow Us @adrien._0.1</button>
-  </a>  <div class="countdown" id="countdown"></div>  <div class="inspired">Inspired by Hermès</div>
-  <div class="thankyou">Thank you for visiting us</div>  <script>
+  </a>  <div class="countdown" id="countdown"></div>  <div class="thankyou">Thank you for visiting us</div>  <script>
     const countdownEl = document.getElementById('countdown');
     const targetDate = new Date();
     targetDate.setFullYear(targetDate.getFullYear() + 9);
